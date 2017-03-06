@@ -1,5 +1,5 @@
 # Learning-Python
-<p>learning python and following project list from here: https://docs.google.com/document/d/1TyqD2_oDtiQIh_Y55J5RfeA91JJECc97xYIKM112H9I/edit</p>
+<p>learning python and following project list from here: https://docs.google.com/document/d/1TyqD2_oDtiQIh_Y55J5RfeA91JJECc97xYIKM112H9I/edit?usp=sharing</p>
 
 <p>Project List</p>
 <p>Projects are ordered from easiest to hardest.</p>
