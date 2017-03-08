@@ -6,7 +6,7 @@
 
 <ul>
   <li>99 Bottles of Beer on the Wall Lyrics ☑</li>
-  <li>Magic 8 Ball ☐</li>
+  <li>Magic 8 Ball ☑</li>
   <li>Pythagorean Triples Checker ☐</li>
   <li>Coin Estimator By Weight ☐</li>
   <li>Mad Libs Story Maker ☐</li>
