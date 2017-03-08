@@ -3,6 +3,7 @@ from Tkinter import *
 import random
 
 class GuiTest(Frame):
+    #setup gui and organize the elements in the gui
     def __init__(self,master):
         Frame.__init__(self,master)
         self.master = master
@@ -36,14 +37,17 @@ class GuiTest(Frame):
 
         self.close_button = Button(master, text="Quit", command=master.quit)
         self.close_button.pack(side=RIGHT, padx=5, pady=5)
+
+
     def clear(self):
         end = len(self.entry.get())
         self.entry.delete(0,end)
     def ask(self):
         self.thinking.config(text = "Thinking...")
-        print(self.entry.get())
-        choice = random.randint(0,7)
-        response = ["Yes", "No", "Maybe", "Try again", "Outcome not clear", "Go for it", "na", "Ask something else"]
+        #find possible way to delay answer to give a sort of thinking feel to the application. tried importing time and using methods like sleep or after. when I use that the gui just skips the "thinking" part and stops, then it displays the response.
+        #print(self.entry.get()) #used for debugging
+        choice = random.randint(0,19)
+        response = ["It is certain", "It is decidedly so", "Without a doubt", "Yes definitely", "You may rely on it", "As I see it, yes", "Most likely", "Outlook good", "Yes", "Signs point to yes", "Reply hazy try again", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again", "Don't count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful"]
         self.answer.config(text = response[choice])
     def again(self):
         self.clear()
