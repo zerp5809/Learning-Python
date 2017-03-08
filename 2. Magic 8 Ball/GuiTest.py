@@ -1,32 +1,54 @@
-from Tkinter import Tk, Label, Button, Entry
+__author__ = 'Shane Yang'
+from Tkinter import *
+import random
 
-class GuiTest:
+class GuiTest(Frame):
     def __init__(self,master):
+        Frame.__init__(self,master)
         self.master = master
         master.title("Magic 8 Ball")
 
         self.label = Label(master, text="Ask your question!")
         self.label.pack()
 
-        self.entry = Entry(master)
-        self.entry.pack()
+        frame = Frame(master)
+        frame.pack(fill=BOTH, expand=True)
 
-        self.greet_button = Button(master, text="Ask", command=self.Ask)
-        self.greet_button.pack()
+        self.entry = Entry(frame)
+        self.entry.pack(side=LEFT, padx=5, pady=5)
 
-        self.greet_button = Button(master, text="Play Again", command=self.Ask)
-        self.greet_button.pack()
+        self.ask_button = Button(frame, text="Ask", command=self.ask)
+        self.ask_button.pack(side=LEFT, padx=0, pady=0)
 
-        self.clear_button = Button(master, text="Clear", command=self.clear)
-        self.clear_button.pack()
+        self.clear_button = Button(frame, text="Clear", command=self.clear)
+        self.clear_button.pack(side=LEFT, padx=5, pady=5)
+
+        frame1 = Frame(master)
+        frame1.pack(fill=BOTH, expand=True)
+
+        self.thinking = Label(frame1, text = " ")
+        self.thinking.pack()
+        self.answer = Label(frame1, text = " ")
+        self.answer.pack()
+
+        self.again_button = Button(master, text="Play Again", command=self.again)
+        self.again_button.pack(side= LEFT, padx=5, pady=5)
 
         self.close_button = Button(master, text="Quit", command=master.quit)
-        self.close_button.pack()
+        self.close_button.pack(side=RIGHT, padx=5, pady=5)
     def clear(self):
         end = len(self.entry.get())
         self.entry.delete(0,end)
-    def Ask(self):
+    def ask(self):
+        self.thinking.config(text = "Thinking...")
         print(self.entry.get())
+        choice = random.randint(0,7)
+        response = ["Yes", "No", "Maybe", "Try again", "Outcome not clear", "Go for it", "na", "Ask something else"]
+        self.answer.config(text = response[choice])
+    def again(self):
+        self.clear()
+        self.thinking.config(text = " ")
+        self.answer.config(text= " ")
 
 root = Tk()
 my_gui = GuiTest(root)
