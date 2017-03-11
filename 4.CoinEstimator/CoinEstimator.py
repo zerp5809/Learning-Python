@@ -21,13 +21,13 @@ class CoinEstimator():
         if coinType.lower()=="quarters" or coinType.lower() == "quarter":
             amount = int((weight/q))*0.25
             return amount
-        elif coinType.lower()=="dimes" or coinType.lower == "dime":
+        elif coinType.lower()=="dimes" or coinType.lower() == "dime":
             amount = int((weight/d))*0.10
             return amount
-        elif coinType.lower()=="nickels" or coinType.lower == "nickel":
+        elif coinType.lower()=="nickels" or coinType.lower() == "nickel":
             amount = int((weight/n))*0.05
             return amount
-        elif coinType.lower()=="pennies" or coinType.lower == "penny":
+        elif coinType.lower()=="pennies" or coinType.lower() == "penny":
             amount = int((weight/p))*0.01
             return amount
         else:
@@ -51,8 +51,10 @@ class CoinEstimator():
     #ask for units, type of coin, then weight, and the finally calculate
     print("Hello, I am the coin estimator. I estimate the total amount of coins based on weight")
     while again:
+            more = True
+            total = 0
+            u = raw_input("Please enter units you are using (G/LBS): ")
             while more:
-                u = raw_input("Please enter units you are using (G/LBS): ")
                 coinType = raw_input("Please enter the type of coin: ")
                 try:
                     weight = float(input("Please enter the total weight of coins: "))
