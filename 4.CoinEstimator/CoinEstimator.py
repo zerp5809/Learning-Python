@@ -38,14 +38,14 @@ class CoinEstimator():
         return subtotal
     def checkYN(input):
         a = input
-        while a != "Y" or a != "y" or a != "N" or a != "n":
-            if (a == 'N' or a == "n" or a == "Y" or a == "y"):
+        while a.lower()!= "y" or a.lower()!="n":
+            if (a.lower() == "n" or a.lower() == "y"):
                 break
             else:
                 a = raw_input("I didn\'t get that. Estimate the amount of another set of coins?(Y/N)?")
-        if (a == 'N' or a == "n"):
+        if (a.lower() == "n"):
             return False
-        elif (a == "Y" or a == "y"):
+        elif (a.lower() == "y"):
             return True
     #units used lbs = 1 g = 0
     #ask for units, type of coin, then weight, and the finally calculate

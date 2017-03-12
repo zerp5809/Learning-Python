@@ -31,12 +31,12 @@ class PyTriChecker():
         third = input("Please enter the third number: ")
         check(first, second, third)
         a = raw_input("Try another set of numbers?(Y/N)?")
-        while a != "Y" or a != "y" or a != "N" or a != "n":
-            if (a == 'N' or a == "n" or a == "Y" or a == "y"):
+        while a.lower()!= "y" or a.lower()!="n":
+            if (a.lower() == "n" or a.lower() == "y"):
                 break
             else:
-                a = raw_input("I didn\'t get that. Try another set of numbers?(Y/N)?")
-        if (a == 'N' or a == "n"):
-            again = False
-        elif (a == "Y" or a == "y"):
-            again = True
+                 a = raw_input("I didn\'t get that. Try another set of numbers?(Y/N)?")
+        if (a.lower() == "n"):
+            again =  False
+        elif (a.lower() == "y"):
+            again =  True
