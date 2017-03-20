@@ -1,7 +1,10 @@
 __author__ = 'Shane Yang'
 class MadStoryMaker():
     def makeStory(activity, location, bodyPart, mood):
-        msg = "Steve went for a "
+        if activity[0].lower() == "a" or activity[0].lower() == "e" or activity[0].lower() == "i" or activity[0].lower() == "o" or activity[0].lower() == "u":
+            msg = "Steve went for an "
+        else:
+            msg = "Steve went for a "
         msg += activity
         msg += ". During his "
         msg += activity
