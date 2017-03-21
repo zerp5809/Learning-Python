@@ -7,4 +7,3 @@ Tip - It's easiest to write out a quick story on a piece of paper or a word docu
 Subgoals
 If the user has to put in a name, change the first letter to a capital letter.
 Change the word "a" to "an" when the next word in the sentence begins with a vowel.
-1 commentsharesavehidegive goldreport
