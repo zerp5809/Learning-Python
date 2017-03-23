@@ -34,8 +34,8 @@ class ChangeCalc():
                 elif total < .05 and total > 0:
                     pennies = total/.01
                     total = total - (pennies*.01)
-                    print (total)
-            print("Q: ", int(quarters), " D: ", int(dimes), " N: ", int(nickels), " P: ", int(pennies))
+
+            print"You will need to give the customer:", int(quarters), " Quarter(s) ",  int(dimes), " Dime(s) ", int(nickels), " Nickle(s) and ", int(pennies),  " Penny(ies): "
     again = True
     print("Hello, I will calculate the change in coins based on your entry.")
     while again:
