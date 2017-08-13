@@ -11,8 +11,8 @@
   <li>Coin Estimator By Weight ☑</li>
   <li>Mad Libs Story Maker ☑</li>
   <li>Change Calculator ☑</li>
-  <li>Mean, Median, and Mode ☐</li>
-  <li>Higher Lower Guessing Game ☐</li>
+  <li>Mean, Median, and Mode ☑</li>
+  <li>Higher Lower Guessing Game ☑</li>
   <li>Multiplication Table ☐</li>
   <li>Fibonacci Sequence ☐</li>
   <li>Hangman Game ☐</li>
